@@ -12,4 +12,10 @@ contract productID {
         productToHash[_productID] = hashes;
         return hashes;
     }
+    
+    function Remove (uint256 _product) public returns (uint256){
+        counter--;
+        delete getHash[_product];
+        return counter;
+    }
 }   
